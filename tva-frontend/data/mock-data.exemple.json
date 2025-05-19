@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1001",
+    "name": "Loki Laufeyson",
+    "universe": "Terra-1130",
+    "power_level": "Alto",
+    "void_place": "Zona 3 - Nebulosa do Esquecimento",
+    "status": "Podado",
+    "variation_type": "Mudança de destino - Sobreviveu a Thanos",
+    "group": ["Sylvie", "Mobius"],
+    "multiversal_danger": true,
+    "skills": ["Ilusão", "Manipulação temporal", "Magia Asgardiana"],
+    "last_activity": "2025-05-18T14:32:00Z",
+    "observations": "Extremamente persuasivo. Conexão emocional com variantes pode gerar colapsos temporais."
+  },
+
+  {
+    "id": "1040",
+    "name": "Groot - Guardião da Floresta",
+    "universe": "Terra-4521",
+    "power_level": "Médio",
+    "void_place": "Zona 4 - Floresta Viva",
+    "status": "Ativo",
+    "variation_type": "Comunicação avançada com flora",
+    "group": ["Rocket Raccoon"],
+    "multiversal_danger": false,
+    "skills": ["Regeneração", "Força natural", "Comunicação vegetal"],
+    "last_activity": "2025-05-18T20:00:00Z",
+    "observations": "Protetor da natureza."
+  }
+  ]

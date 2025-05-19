@@ -1,0 +1,99 @@
+### ✅ Consulta interna bem-sucedida (GET 200)
+GET http://localhost:3000/api/temporal_variants/?variant_id=1024
+X-API-KEY: xxxxxxxxxxx
+
+
+### 🔐 Chave da API inválida (GET 401)
+GET http://localhost:3000/api/temporal_variants/?variant_id=1036
+X-API-KEY: x
+
+
+### ❌ Sem chave da API (GET 401)
+GET http://localhost:3000/api/temporal_variants/?variant_id=1036
+
+
+### 🚫 variant_id não fornecido (GET 400)
+GET http://localhost:3000/api/temporal_variants/
+X-API-KEY: xxxxxxxxxxx
+
+
+### ❓ Registro não encontrado (GET 404)
+GET http://localhost:3000/api/temporal_variants/?variant_id=9999
+X-API-KEY: xxxxxxxxxxx
+
+
+### 🧮 variant_id deve ser um número inteiro (GET 422)
+GET http://localhost:3000/api/temporal_variants/?variant_id=1.5312
+X-API-KEY: xxxxxxxxxxx
+
+GET http://localhost:3000/api/temporal_variants/?variant_id=abc
+X-API-KEY: xxxxxxxxxxx
+
+
+### 🚫 variant_id inválido (GET 422)
+GET http://localhost:3000/api/temporal_variants/?variant_id=0
+X-API-KEY: xxxxxxxxxxx
+
+GET http://localhost:3000/api/temporal_variants/?variant_id=-15
+X-API-KEY: xxxxxxxxxxx
+
+
+### 🐞 variant_id malformado (GET 400)
+GET http://localhost:3000/api/temporal_variants/?variant_id
+X-API-KEY: xxxxxxxxxxx
+
+
+### 🆕 Criar registro (POST 201)
+POST http://localhost:3000/api/temporal_variants/
+Content-Type: application/json
+X-API-KEY: xxxxxxxxxxx
+
+{
+  "id": "1077",
+  "name": "Nova - Exploradora Estelar",
+  "universe": "Terra-2299",
+  "power_level": "Muito Alto",
+  "void_place": "Zona 7 - Abismo Cósmico",
+  "status": "Ativo",
+  "variation_type": "Capacidade de manipular energia estelar",
+  "group": ["Quasar", "Star-Lord"],
+  "multiversal_danger": true,
+  "skills": ["Manipulação de energia", "Voo interdimensional", "Telepatia"],
+  "last_activity": "2025-05-19T10:00:00Z",
+  "observations": "Extremamente adaptável a ambientes hostis, sua presença altera fluxos temporais locais."
+}
+
+
+### ♻️ Atualizar registro (PUT 200)
+PUT http://localhost:3000/api/temporal_variants/?variant_id=1077
+Content-Type: application/json
+X-API-KEY: xxxxxxxxxxx
+
+{
+  "id": "1077",
+  "name": "Nova - Atuaizada",
+  "universe": "Terra-Atuaizada",
+  "power_level": "Muito Atuaizada",
+  "void_place": "Zona 7 - Abismo Atuaizada",
+  "status": "Ativo",
+  "variation_type": "Capacidade dAtuaizada",
+  "group": ["Atuaizada", "Star-Atuaizada"],
+  "multiversal_danger": true,
+  "skills": ["Manipulação Atuaizada", "Voo Atuaizada", "Atuaizada"],
+  "last_activity": "2025-05-19T10:00:00Z",
+  "observations": "Extremamente Atuaizada."
+}
+
+### 🗑️ Deletar registro (DELETE 204)
+DELETE http://localhost:3000/api/temporal_variants/?variant_id=1077
+X-API-KEY: xxxxxxxxxxx
+
+
+### 🔑 Gerar token no Directus (POST)
+POST http://localhost:8055/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "avt"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "time-variance-authority",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build --outdir=dist --target=browser --minify --sourcemap",
+    "test": "bun test",
+    "lint": "bun run eslint .",
+    "format": "bun run prettier .",
+    "json":"bun run src/index-json.ts",
+    "directus":"bun run src/index-directus.ts"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
